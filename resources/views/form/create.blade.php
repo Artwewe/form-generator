@@ -37,7 +37,7 @@
                 </div>
 
                 <div class="deleteIcon text-right">
-                    delete
+                    <i class="actions fa fa-times"></i>
                 </div>
             </div>
 
@@ -47,7 +47,7 @@
                 </div>
 
                 <div class="deleteIcon text-right">
-                    delete
+                    <i class="actions fa fa-times"></i>
                 </div>
             </div>
 
@@ -57,13 +57,13 @@
                 </div>
 
                 <div class="deleteIcon text-right">
-                    delete
+                    <i class="actions fa fa-times"></i>
                 </div>
             </div>
 
             <div class="addOptionContainer flex justify-center items-center mt-4">
                 <div class="w-12 h-12 rounded-full flex justify-center items-center cursor-pointer bg-green-500">
-                    add
+                    <i class="actions fa fa-plus"></i>
                 </div>
             </div>
         </div>
@@ -73,8 +73,8 @@
         <div class="questionSettings grid grid-cols-3 w-full">
 
             <div class="col-span-2 flex space-x-4 justify-end mr-4">
-                <div>duplicar</div>
-                <div>apagar</div>
+                <div><i class="actions far fa-copy"></i></div>
+                <div><i class="actions far fa-trash-alt"></i></div>
             </div>
 
             <div class="flex space-x-2 pl-4 border-l-[1px]">
@@ -85,8 +85,8 @@
     </div>
 
     <div class="addQuestionContainer flex justify-center items-center mt-4">
-        <div class="w-12 h-12 rounded-full flex justify-center items-center cursor-pointer bg-green-500">
-            add
+        <div class="w-12 h-12 rounded-full flex justify-center items-center bg-green-500">
+            <i class="actions fa fa-plus"></i>
         </div>
     </div>
 
