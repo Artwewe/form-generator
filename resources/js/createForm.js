@@ -14,8 +14,6 @@ $(document).ready(function () {
         };
 
         if ($(target).hasClass('deleteOption')) $(target).closest('.optionContainer').remove();
-
-
         if ($(target).hasClass('deleteQuestion')) {
             var confirmDelete = confirm('Are you sure you want to delete this question?');
             if (confirmDelete == true) $(target).closest('.questionContainer').remove();
@@ -40,12 +38,12 @@ function addNewQuestion() {
     html += '<div class="questionInfo grid grid-cols-2">';
     html += '<div><input type="text" placeholder="Question" class="w-full rounded border border-black"></div>';
     html += '<div class="flex justify-center items center">';
-    html += '<select name="questionType" class="rounded border border-black"><option value="multiple">Multiple Choice</option><option value="checkbox">Checkbox</option><option value="dropdown">Dropdown</option></select>';
+    html += '<select id="question_type" class="rounded border border-black"><option value="multiple">Multiple Choice</option><option value="checkbox">Checkbox</option><option value="dropdown">Dropdown</option></select>';
     html += '</div></div>';
 
     /* QUESTION OPTIONS */
     html += '<div id="options_container" class="optionsContainer grid grid-cols-1 space-y-4 mt-4">';
-    html += '<div id="option_container_1" class="optionContainer question grid grid-cols-2"><div class="questionDescription">Option 1</div><div class="deleteIcon text-right"><i class="deleteOption actions fa fa-times"></i></div></div>';
+    html += '<div id="option_container_1" class="optionContainer question grid grid-cols-2"><div class="questionDescription"><input type="text" placeholder="Option 1" class="optionInput w-full rounded border border-black"></div><div class="deleteIcon text-right"><i class="deleteOption actions fa fa-times"></i></div></div>';
     html += '</div>';
 
     /* ADD OPTIONS BUTTON */
@@ -69,13 +67,13 @@ function addNewQuestion() {
 function addQuestionOption(questionId) {
     var questionContainer = $("#question_container_" + questionId);
     var lastOptionContainerId = $(questionContainer).find("#options_container").children().last().attr('id');
-    
+
     var lastOptionId = (lastOptionContainerId != undefined) ? lastOptionContainerId.split('_')[2] : 0;
     var newOptionId = parseInt(lastOptionId) + 1;
     var optionsContainer = $(questionContainer).find("#options_container");
 
     var html = '<div id="option_container_' + newOptionId + '" class="optionContainer grid grid-cols-2">';
-    html += '<div class="optionDescription">Option ' + newOptionId + '</div>'; //Option
+    html += '<div class="optionDescription"><input type="text" placeholder="Option ' + newOptionId + '" class="optionInput w-full rounded border border-black"></div>'; //Option
     html += '<div class="deleteIcon text-right"><i class="deleteOption actions fa fa-times"></i></div>'; // Delete icon
     html += '</div>';
 

@@ -17,13 +17,12 @@
 
     <div id="questions_container">
         <div id="question_container_1" class="questionContainer">
-
             <div class="questionInfo grid grid-cols-2">
                 <div>
                     <input type="text" placeholder="Question" class="w-full rounded border border-black">
                 </div>
                 <div class="flex justify-center items center">
-                    <select name="questionType" class="rounded border border-black">
+                    <select id="questionType" class="rounded border border-black">
                         <option value="multiple">Multiple Choice</option>
                         <option value="checkbox">Checkbox</option>
                         <option value="dropdown">Dropdown</option>
@@ -34,7 +33,7 @@
             <div id="options_container" class="questionOptions grid grid-cols-1 space-y-4 mt-4">
                 <div id="option_container_1" class="optionContainer grid grid-cols-2">
                     <div class="optionDescription">
-                        Option 1
+                        <input type="text" placeholder="Option 1" class="optionInput w-full rounded border border-black">
                     </div>
 
                     <div class="deleteIcon text-right">
