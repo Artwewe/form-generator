@@ -55,7 +55,7 @@
 
                 <div class="col-span-2 flex space-x-4 justify-end mr-4">
                     <div><i class="actions far fa-copy"></i></div>
-                    <div><i class="actions far fa-trash-alt"></i></div>
+                    <div><i class="deleteQuestion actions far fa-trash-alt"></i></div>
                 </div>
 
                 <div class="flex space-x-2 pl-4 border-l-[1px]">

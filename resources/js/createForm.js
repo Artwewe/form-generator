@@ -13,9 +13,13 @@ $(document).ready(function () {
             addQuestionOption(questionId);
         };
 
-        if ($(target).hasClass('deleteOption')) {
-            $(target).closest('.optionContainer').remove();
-        };
+        if ($(target).hasClass('deleteOption')) $(target).closest('.optionContainer').remove();
+
+
+        if ($(target).hasClass('deleteQuestion')) {
+            var confirmDelete = confirm('Are you sure you want to delete this question?');
+            if (confirmDelete == true) $(target).closest('.questionContainer').remove();
+        }
     });
 });
 
@@ -26,7 +30,8 @@ $(document).ready(function () {
 
 function addNewQuestion() {
     var lastContainerId = $("#questions_container").children().last().attr("id");
-    var lastQuestionId = lastContainerId.split("_")[2];
+    var lastQuestionId = (lastContainerId != undefined) ? lastContainerId.split("_")[2] : 0;
+
     var newQuestionId = parseInt(lastQuestionId) + 1;
 
     var html = '<div id="question_container_' + newQuestionId + '" class="questionContainer">';
@@ -53,7 +58,7 @@ function addNewQuestion() {
 
     /* QUESTION SETTINGS */
     html += '<div class="questionSettings grid grid-cols-3 w-full">';
-    html += '<div class="col-span-2 flex space-x-4 justify-end mr-4"><div><i class="actions far fa-copy"></i></div><div><i class="actions far fa-trash-alt"></i></div></div>';
+    html += '<div class="col-span-2 flex space-x-4 justify-end mr-4"><div><i class="actions far fa-copy"></i></div><div><i class="deleteQuestion actions far fa-trash-alt"></i></div></div>';
     html += '<div class="flex space-x-2 pl-4 border-l-[1px]"><div>Required</div><div>button</div></div>';
     html += '</div>';
 
