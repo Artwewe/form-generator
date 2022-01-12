@@ -12,6 +12,10 @@ $(document).ready(function () {
 
             addQuestionOption(questionId);
         };
+
+        if ($(target).hasClass('deleteOption')) {
+            $(target).closest('.optionContainer').remove();
+        };
     });
 });
 
@@ -58,16 +62,16 @@ function addNewQuestion() {
 }
 
 function addQuestionOption(questionId) {
-    var questionContainerId = "question_container_" + questionId;
-    var questionContainer = $("#" + questionContainerId);
+    var questionContainer = $("#question_container_" + questionId);
     var lastOptionContainerId = $(questionContainer).find("#options_container").children().last().attr('id');
-    var lastOptionId = lastOptionContainerId.split('_')[2];
+    
+    var lastOptionId = (lastOptionContainerId != undefined) ? lastOptionContainerId.split('_')[2] : 0;
     var newOptionId = parseInt(lastOptionId) + 1;
     var optionsContainer = $(questionContainer).find("#options_container");
 
-    var html = '<div id="option_container_' + newOptionId + '" class="question grid grid-cols-2">';
-    html += '<div class="questionDescription">Option ' + newOptionId + '</div>'; //Option
-    html += '<div class="deleteIcon text-right"><i class="actions fa fa-times"></i></div>'; // Delete icon
+    var html = '<div id="option_container_' + newOptionId + '" class="optionContainer grid grid-cols-2">';
+    html += '<div class="optionDescription">Option ' + newOptionId + '</div>'; //Option
+    html += '<div class="deleteIcon text-right"><i class="deleteOption actions fa fa-times"></i></div>'; // Delete icon
     html += '</div>';
 
 

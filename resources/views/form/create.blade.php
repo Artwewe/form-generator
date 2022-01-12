@@ -32,13 +32,13 @@
             </div>
 
             <div id="options_container" class="questionOptions grid grid-cols-1 space-y-4 mt-4">
-                <div id="option_container_1" class="question grid grid-cols-2">
-                    <div class="questionDescription">
+                <div id="option_container_1" class="optionContainer grid grid-cols-2">
+                    <div class="optionDescription">
                         Option 1
                     </div>
 
                     <div class="deleteIcon text-right">
-                        <i class="actions fa fa-times"></i>
+                        <i class="deleteOption actions fa fa-times"></i>
                     </div>
                 </div>
             </div>
