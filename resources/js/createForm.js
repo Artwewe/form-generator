@@ -45,7 +45,7 @@ function addNewQuestion() {
 
     /* QUESTION OPTIONS */
     html += '<div id="options_container" class="optionsContainer grid grid-cols-1 space-y-4 mt-4">';
-    html += '<div id="option_container_1" class="question grid grid-cols-2"><div class="questionDescription">Option 1</div><div class="deleteIcon text-right"><i class="actions fa fa-times"></i></div></div>';
+    html += '<div id="option_container_1" class="optionContainer question grid grid-cols-2"><div class="questionDescription">Option 1</div><div class="deleteIcon text-right"><i class="deleteOption actions fa fa-times"></i></div></div>';
     html += '</div>';
 
     /* ADD OPTIONS BUTTON */
