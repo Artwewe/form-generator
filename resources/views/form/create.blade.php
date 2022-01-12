@@ -31,8 +31,8 @@
                 </div>
             </div>
 
-            <div class="questionOptions grid grid-cols-1 space-y-4 mt-4">
-                <div class="question grid grid-cols-2">
+            <div id="options_container" class="questionOptions grid grid-cols-1 space-y-4 mt-4">
+                <div id="option_container_1" class="question grid grid-cols-2">
                     <div class="questionDescription">
                         Option 1
                     </div>
@@ -41,11 +41,11 @@
                         <i class="actions fa fa-times"></i>
                     </div>
                 </div>
+            </div>
 
-                <div class="addOptionContainer flex justify-center items-center mt-4">
-                    <div class="w-12 h-12 rounded-full flex justify-center items-center cursor-pointer bg-green-500">
-                        <i class="actions fa fa-plus"></i>
-                    </div>
+            <div class="flex justify-center items-center mt-4">
+                <div class="addOption w-12 h-12 rounded-full flex justify-center items-center cursor-pointer bg-green-500">
+                    <i class="addOption actions fa fa-plus"></i>
                 </div>
             </div>
 
