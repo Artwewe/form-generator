@@ -5,3 +5,12 @@
 .actions {
     cursor: pointer !important;
 }
+
+.questionContainer {
+    width: 90%;
+    background-color: white;
+    margin: auto;
+    border-radius: 0.25rem;
+    margin-top: 1rem;
+    padding: 1rem;
+}
